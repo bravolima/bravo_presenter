@@ -3,7 +3,7 @@ module BravoPresenter::ViewHelpers
 
   # nodoc
   def present(object)
-    return present_collection(object) if object.kind_of?(Array)
+    return present_collection(object) if object.respond_to?(:each)
     present_object(object)
   end
 
