@@ -1,6 +1,6 @@
 class BravoPresenter::Collection
+  include Enumerable
   attr_accessor :collection, :template
-  delegate :empty?, :to => :collection
 
 
   # nodoc
@@ -12,8 +12,8 @@ class BravoPresenter::Collection
 
   # nodoc
   def each(&block)
-    collection.each do |object|
-      block.call template.present_object(object)
+    collection.each do |obj|
+      block.call template.present_object(obj)
     end
   end
 
