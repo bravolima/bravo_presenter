@@ -10,7 +10,6 @@ module BravoPresenter::ViewHelpers
 
   # nodoc
   def present_collection(arr)
-    return arr if arr.empty?
     BravoPresenter::Collection.new(arr, self)
   end
 
