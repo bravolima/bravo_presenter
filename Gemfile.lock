@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bravo_presenter (0.0.5)
+    bravo_presenter (0.0.6)
 
 GEM
   remote: http://rubygems.org/
